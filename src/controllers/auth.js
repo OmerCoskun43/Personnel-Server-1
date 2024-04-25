@@ -7,6 +7,7 @@ const passwordEncrypt = require("../helpers/passwordEncrypt");
 module.exports = {
   login: async (req, res) => {
     const { username, password, email } = req.body;
+    console.log(req.body);
 
     if ((username || email) && password) {
       const user = await Personnel.findOne({ $or: [{ username }, { email }] });

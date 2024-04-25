@@ -40,3 +40,6 @@ app.use(require("./src/middlewares/errorHandler"));
 app.listen(PORT, () => {
   console.log(`Server is running on ${HOST}:${PORT}`);
 });
+
+// Syncronization (must be in commentLine):
+// require("./src/helpers/sync")();
